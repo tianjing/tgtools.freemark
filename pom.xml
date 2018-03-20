@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>tgtools</groupId>
     <artifactId>tgtools.freemark</artifactId>
-    <version>2.3.27.1-SNAPSHOT</version>
+    <version>2.3.27.1</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <url>https://github.com/tianjing/tgtools.freemark</url>
@@ -32,7 +30,7 @@
         <connection>scm:git:https://github.com/tianjing/tgtools.freemark.git</connection>
         <developerConnection>scm:git:https://github.com/tianjing/tgtools.freemark.git</developerConnection>
         <url>https://github.com/tianjing/tgtools.freemark</url>
-        <tag>v${project.version}</tag>
+        <tag>v2.3.27.1-SNAPSHOT</tag>
     </scm>
 
     <dependencies>
@@ -75,16 +73,6 @@
     </repositories>
     <build>
         <plugins>
-            <!-- git 发布 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.3</version>
-                <configuration>
-                    <tagNameFormat>v@{project.version}-SNAPSHOT</tagNameFormat>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
-                </configuration>
-            </plugin>
             <!--  编译 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -95,7 +83,7 @@
                     <target>1.6</target>
                     <encoding>utf-8</encoding>
                     <compilerArguments>
-                        <verbose/>
+                        <verbose />
                         <!-- 这个配置很特殊：windows下使用分号（;）分隔，linux/mac下使用冒号（:）分隔 -->
                         <bootclasspath>${java.home}/lib/rt.jar;${java.home}/lib/jce.jar</bootclasspath>
                     </compilerArguments>
